@@ -1,0 +1,30 @@
+clear;
+close all;
+clc;
+syms t;
+f1=cos(t);
+f2=cos(t-1);
+f3=sin(t);
+f4=sin(t-1);
+F1=fourier(f1)
+F2=fourier(f2)
+F3=fourier(f3)
+F4=fourier(f4)
+figure(1);
+subplot(2,2,1);
+ezplot(f1);
+subplot(2,2,3);
+ezplot(F1);
+subplot(2,2,2);
+ezplot(f2);
+subplot(2,2,4);
+ezplot(F2);
+figure(2)
+subplot(2,2,1);
+ezplot(f3);
+subplot(2,2,3);
+ezplot(F3);
+subplot(2,2,2);
+ezplot(f4);
+subplot(2,2,4);
+ezplot(F4);

@@ -1,0 +1,16 @@
+clear;
+close all;
+clc;
+syms t;
+f1=exp(-t)*heaviside(t)+exp(t)*heaviside(-t);
+F1=fourier(f1);
+f2=exp(-3*t)*heaviside(t)+exp(3*t)*heaviside(-t);
+F2=fourier(f2);
+subplot(2,2,1);
+ezplot(f1);
+subplot(2,2,3);
+ezplot(F1);
+subplot(2,2,2);
+ezplot(f2);
+subplot(2,2,4);
+ezplot(F2);
